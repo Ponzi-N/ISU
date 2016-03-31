@@ -1,28 +1,25 @@
-////////////////////////////////////////////////////////////////////////////////
-// Filename: graphicsclass.cpp
-////////////////////////////////////////////////////////////////////////////////
 #include "Graphics.h"
 
 
-GraphicsClass::GraphicsClass()
+pGraphics::pGraphics()
 {
 	pD3D = 0;
-	pCamera = 0;
+	Camera = 0;
 	pText = 0;
 }
 
 
-GraphicsClass::GraphicsClass(const GraphicsClass& other)
+pGraphics::pGraphics(const pGraphics& other)
 {
 }
 
 
-GraphicsClass::~GraphicsClass()
+pGraphics::~pGraphics()
 {
 }
 
 
-bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
+bool pGraphics::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 {
 	bool result;
 	D3DXMATRIX baseViewMatrix;
@@ -44,16 +41,16 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 	}
 
 	// Create the camera object.
-	pCamera = new CameraClass;
-	if (!pCamera)
+	Camera = new pCamera;
+	if (!Camera)
 	{
 		return false;
 	}
 
 	// Initialize a base view matrix with the camera for 2D user interface rendering.
-	pCamera->SetPosition(0.0f, 0.0f, -1.0f);
-	pCamera->Render();
-	pCamera->GetViewMatrix(baseViewMatrix);
+	Camera->SetPosition(0.0f, 0.0f, -1.0f);
+	Camera->Render();
+	Camera->GetViewMatrix(baseViewMatrix);
 
 	// Create the text object.
 	pText = new TextClass;
@@ -74,7 +71,7 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 }
 
 
-void GraphicsClass::Shutdown()
+void pGraphics::Shutdown()
 {
 	// Release the text object.
 	if (pText)
@@ -85,10 +82,10 @@ void GraphicsClass::Shutdown()
 	}
 
 	// Release the camera object.
-	if (pCamera)
+	if (Camera)
 	{
-		delete pCamera;
-		pCamera = 0;
+		delete Camera;
+		Camera = 0;
 	}
 
 	// Release the D3D object.
@@ -103,7 +100,7 @@ void GraphicsClass::Shutdown()
 }
 
 
-bool GraphicsClass::Frame(int fps, int cpu, float frameTime)
+bool pGraphics::Frame(int fps, int cpu, float frameTime)
 {
 	bool result;
 
@@ -124,13 +121,13 @@ bool GraphicsClass::Frame(int fps, int cpu, float frameTime)
 
 
 	// Set the position of the camera.
-	pCamera->SetPosition(0.0f, 0.0f, -10.0f);
+	Camera->SetPosition(0.0f, 0.0f, -10.0f);
 
 	return true;
 }
 
 
-bool GraphicsClass::Render()
+bool pGraphics::Render()
 {
 	D3DXMATRIX worldMatrix, viewMatrix, projectionMatrix, orthoMatrix;
 	bool result;
@@ -140,10 +137,10 @@ bool GraphicsClass::Render()
 	pD3D->BeginScene(0.0f, 0.0f, 0.0f, 1.0f);
 
 	// Generate the view matrix based on the camera's position.
-	pCamera->Render();
+	Camera->Render();
 
 	// Get the view, projection, and world matrices from the camera and D3D objects.
-	pCamera->GetViewMatrix(viewMatrix);
+	Camera->GetViewMatrix(viewMatrix);
 	pD3D->GetWorldMatrix(worldMatrix);
 	pD3D->GetProjectionMatrix(projectionMatrix);
 	pD3D->GetOrthoMatrix(orthoMatrix);
