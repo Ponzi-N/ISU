@@ -1,11 +1,10 @@
 #include <d3dx10math.h>
 
-class CameraClass
-{
+class pCamera{
 public:
-	CameraClass();
-	CameraClass(const CameraClass&);
-	~CameraClass();
+	pCamera();
+	pCamera(const pCamera&);
+	~pCamera();
 
 	void SetPosition(float, float, float);
 	void SetRotation(float, float, float);
