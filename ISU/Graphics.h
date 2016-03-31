@@ -8,12 +8,11 @@ const float SCREEN_NEAR = 0.1f;
 #include "TextHandler.h"
 
 
-class GraphicsClass
-{
+class pGraphics {
 public:
-	GraphicsClass();
-	GraphicsClass(const GraphicsClass&);
-	~GraphicsClass();
+	pGraphics();
+	pGraphics(const pGraphics&);
+	~pGraphics();
 
 	bool Initialize(int, int, HWND);
 	void Shutdown();
@@ -22,6 +21,6 @@ public:
 
 private:
 	D3DClass* pD3D;
-	CameraClass* pCamera;
+	pCamera* Camera;
 	TextClass* pText;
 };
