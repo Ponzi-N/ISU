@@ -1,10 +1,7 @@
-////////////////////////////////////////////////////////////////////////////////
-// Filename: cameraclass.cpp
-////////////////////////////////////////////////////////////////////////////////
 #include "CameraHandler.h"
 
 
-CameraClass::CameraClass()
+pCamera::pCamera()
 {
 	m_positionX = 0.0f;
 	m_positionY = 0.0f;
@@ -16,17 +13,17 @@ CameraClass::CameraClass()
 }
 
 
-CameraClass::CameraClass(const CameraClass& other)
+pCamera::pCamera(const pCamera& other)
 {
 }
 
 
-CameraClass::~CameraClass()
+pCamera::~pCamera()
 {
 }
 
 
-void CameraClass::SetPosition(float x, float y, float z)
+void pCamera::SetPosition(float x, float y, float z)
 {
 	m_positionX = x;
 	m_positionY = y;
@@ -35,7 +32,7 @@ void CameraClass::SetPosition(float x, float y, float z)
 }
 
 
-void CameraClass::SetRotation(float x, float y, float z)
+void pCamera::SetRotation(float x, float y, float z)
 {
 	m_rotationX = x;
 	m_rotationY = y;
@@ -44,7 +41,7 @@ void CameraClass::SetRotation(float x, float y, float z)
 }
 
 
-void CameraClass::Render()
+void pCamera::Render()
 {
 	D3DXVECTOR3 up;
 	D3DXVECTOR3 position;
@@ -77,7 +74,7 @@ void CameraClass::Render()
 }
 
 
-void CameraClass::GetViewMatrix(D3DXMATRIX& viewMatrix)
+void pCamera::GetViewMatrix(D3DXMATRIX& viewMatrix)
 {
 	viewMatrix = pViewMatrix;
 	return;
