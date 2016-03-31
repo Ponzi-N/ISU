@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{714cb4e4-92a2-419d-9d38-c9299620d73c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Input">
+      <UniqueIdentifier>{c74af5a7-87e1-4fd0-92b0-9cca06a4a0d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Core">
+      <UniqueIdentifier>{bb9b8fb7-dc2c-4eaf-86c6-8ebdb66f9b80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{3a526012-ea8d-4514-a49c-a5367cfad2b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\API">
+      <UniqueIdentifier>{22c1f173-8533-4a57-99e0-b6fbf4e3ddca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Rendering">
+      <UniqueIdentifier>{6615502e-f4f0-45fb-beb8-cd977302f0f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Rendering\DirectX">
+      <UniqueIdentifier>{d7045a2e-db45-47ff-a7ae-5b43bb892f79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Rendering\Camera">
+      <UniqueIdentifier>{dcf2c99b-5cb7-4cd9-a3ef-b4d9dfb989af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Rendering\Graphics">
+      <UniqueIdentifier>{24e25c0c-46b9-4e01-8eda-32d5a920ed9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Rendering\Font">
+      <UniqueIdentifier>{f65194e1-5c5a-4e21-85d1-885d8317c3e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Rendering\Font\Text">
+      <UniqueIdentifier>{2c775a9a-fd68-41c9-9336-37347d3e32d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Rendering\DirectX\Texture">
+      <UniqueIdentifier>{ce8c1a6e-ce32-4f56-af3b-248384523921}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Rendering\Font\Shader">
+      <UniqueIdentifier>{b8cb5641-3c5a-4765-8557-7379ca8e412f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Rendering\DirectX\Monitor">
+      <UniqueIdentifier>{1f04662e-1f18-44be-a9c4-a9fbcfbd51d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Timing">
+      <UniqueIdentifier>{dd5fda34-3b5a-4f5c-90a6-e99db7c93410}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Shader Files">
+      <UniqueIdentifier>{70a2a3da-14fb-4c43-b935-a353effd8dae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\DataTypes">
+      <UniqueIdentifier>{4ef78e2b-8262-4c23-8582-20e4d258def9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="InputHandler.cpp">
+      <Filter>Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Core.cpp">
+      <Filter>Core\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>Core\Rendering\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX.cpp">
+      <Filter>Core\Rendering\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraHandler.cpp">
+      <Filter>Core\Rendering\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="TextHandler.cpp">
+      <Filter>Core\Rendering\Font\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="FontHandler.cpp">
+      <Filter>Core\Rendering\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureHandler.cpp">
+      <Filter>Core\Rendering\DirectX\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="FontShader.cpp">
+      <Filter>Core\Rendering\Font\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="FPS.cpp">
+      <Filter>Core\Rendering\DirectX\Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="CPU.cpp">
+      <Filter>Core\Rendering\DirectX\Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="Timing.cpp">
+      <Filter>Core\Timing</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="InputHandler.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Core.h">
+      <Filter>Core\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>Core\Rendering\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX.h">
+      <Filter>Core\Rendering\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraHandler.h">
+      <Filter>Core\Rendering\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="TextHandler.h">
+      <Filter>Core\Rendering\Font\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="FontHandler.h">
+      <Filter>Core\Rendering\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureHandler.h">
+      <Filter>Core\Rendering\DirectX\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="FontShader.h">
+      <Filter>Core\Rendering\Font\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="FPS.h">
+      <Filter>Core\Rendering\DirectX\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="CPU.h">
+      <Filter>Core\Rendering\DirectX\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="Timing.h">
+      <Filter>Core\Timing</Filter>
+    </ClInclude>
+    <ClInclude Include="pData.h">
+      <Filter>Core\DataTypes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="font.ps">
+      <Filter>Core\Shader Files</Filter>
+    </None>
+    <None Include="font.vs">
+      <Filter>Core\Shader Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>
